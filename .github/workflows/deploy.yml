@@ -10,10 +10,10 @@ jobs:
 
     steps:
       - name: checkout website code
-      uses: actions/checkout@v4
+        uses: actions/checkout@v4
 
-        - name: check website file exists
-          run: test -f index,html
+      - name: check website file exists
+        run: test -f index.html
 
   display:
     runs-on: ubuntu-latest
@@ -22,5 +22,5 @@ jobs:
       - name: checkout website code
         uses: actions/checkout@v4
 
-          - name: display website content
-            run:cat index.html                
+      - name: display website content
+        run: cat index.html
